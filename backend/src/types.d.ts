@@ -1,8 +1,12 @@
 export interface CustomerEntry {
-    first_name: string;
-    last_name: string;
-    email: string;
-    credit_card: string;
+    carnet: string;
+    nombres: string;
+    apellidos: string;
+    genero: string;
+    facultad: string;
+    carrera: string;
+    correo: string;
+    contraseña: string;
 }
 
 export interface CustomerData extends CustomerEntry {

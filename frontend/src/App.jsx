@@ -9,6 +9,7 @@ import SignUp from './assets/components/SignUp';
 import Login from './assets/components/Login';
 import AdministratorModule from './assets/components/AdministratorModule';
 import CargaMasiva from './assets/components/CargaMasiva';
+import VisualizarDatos from './assets/components/VisualizarDatos';
 
 function App() {
   const animation = useSpring({
@@ -42,6 +43,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<AdministratorModule />} />
           <Route path="/carga-masiva" element={<CargaMasiva />} />
+          <Route path="/visualizacion-de-datos" element={<VisualizarDatos />} />
         </Routes>
       </div>
     </Router>

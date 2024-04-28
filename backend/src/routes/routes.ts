@@ -33,6 +33,23 @@ router.post('/addCustomer',(req, res) => {
     res.send(customerArray);
 });
 
+router.post('/addCustomers',(req, res) => {
+    const newcustomers: CustomerEntry[] = req.body;
+    newcustomers.forEach(customer => {
+        addCustomer(customer);
+    });
+    const customerArray = getCustomers();
+    res.send({ message: 'Se agregaron los clientes correctamente'});
+})
+
+router.post('/addCustomers',(req, res) => {
+    const newCustomers: CustomerEntry[] = req.body;
+    newCustomers.forEach(customer => {
+        addCustomer(customer);
+    });
+    res.send({ message: 'Se agregaron los clientes correctamente'});
+});
+
 router.put('/updateCustomer',(req, res) => {
     const customer: CustomerData = req.body;
     const result = updateCustomer(customer);
